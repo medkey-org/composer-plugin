@@ -1,0 +1,49 @@
+{
+    "name": "medkey/composer-plugin",
+    "description": "Composer Medkey Plugin",
+    "keywords": ["composer", "medkey", "module", "plugin", "ehr", "emr"],
+    "homepage": "https://medkey.org",
+    "type": "composer-plugin",
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Dzhamal Tayibov",
+            "email": "prohps@gmail.com",
+            "role": "Core developer"
+        },
+        {
+            "name": "Dmitry Grudinin",
+            "email": "dogrudinin@gmail.com",
+            "role": "Project lead"
+        }
+    ],
+    "support": {
+        "email": "info@medkey.org",
+        "issues": "https://github.com/medkey-org/composer-plugin/issues",
+        "source": "https://github.com/medkey-org/composer-plugin",
+        "wiki": "https://medkey.org/wiki"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "require": {
+        "composer-plugin-api": "^1.0"
+    },
+    "autoload": {
+        "psr-4": { "app\\composer\\": "" }
+    },
+    "require-dev": {
+        "composer/composer": "^1.3"
+    },
+    "extra": {
+        "class": "app\\composer\\ComponentPlugin"
+    },
+    "config": {
+        "process-timeout": 9999,
+        "disable-tls": true,
+        "secure-http": false
+    }
+}
